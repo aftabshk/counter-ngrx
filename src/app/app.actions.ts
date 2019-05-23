@@ -4,4 +4,6 @@ export const IncrementAction = '[Count Action] Increment';
 
 export class Increment implements Action {
   readonly type = IncrementAction;
+
+  constructor(public payload: number) {}
 }

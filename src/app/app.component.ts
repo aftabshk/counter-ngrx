@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Increment } from './app.actions';
+import { strictEqual } from 'assert';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,6 @@ export class AppComponent {
   }
 
   countAction() {
-    this.store.dispatch(new Increment());
+    this.store.dispatch(new Increment(10));
   }
 }
